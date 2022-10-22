@@ -6,6 +6,17 @@ function love.load()
 end
 
 
+function love.update(dt)
+    if love.keyboard.isDown("left") and x > 250 then
+        x = x - 200 * dt
+    end
+
+    if love.keyboard.isDown("right") and x < 490 then
+        x = x + 200 * dt
+    end
+end
+
+
 function love.draw()
     love.graphics.draw(background_image)
     love.graphics.draw(car, x, y)
