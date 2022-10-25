@@ -17,11 +17,11 @@ function love.update(dt)
         x = x + 200 * dt
     end
 
-    if love.keyboard.isDown( "up" ) then
+    if love.keyboard.isDown("up") then
         -- Quanto maior a velocidade, menor a variação de aceleração
         -- Isso simula a resistência do ar
         acceleration = 10 * (50 - speed) / 50
-    elseif love.keyboard.isDown( "down" ) then
+    elseif love.keyboard.isDown("down") then
         acceleration = -30 -- freia muito: pé no freio
     else
         acceleration = -5 -- freia pouco: simula inércia
