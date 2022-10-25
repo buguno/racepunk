@@ -26,10 +26,21 @@ function love.update(dt)
     else
         acceleration = -5 -- freia pouco: simula inércia
     end
+
+    -- Ajustes da aceleração e velocidade
+    acceleration = acceleration * dt
+    -- Aumenta a aceleração quando o loop
+    -- demora mais e diminui quando o loop é mais lento
+    speed = speed + acceleration
+    if speed < 0 then
+        speed = 0
+    end
 end
 
 
 function love.draw()
     love.graphics.draw(background_image)
     love.graphics.draw(car, x, y)
+
+    love.graphics.print(string.format("Velocidade: %.2f mph", speed), 650, 250)
 end
