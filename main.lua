@@ -43,4 +43,5 @@ function love.draw()
     love.graphics.draw(car, x, y)
 
     love.graphics.print(string.format("Velocidade: %.2f mph", speed), 650, 250)
+    love.graphics.print("Current FPS: "..tostring(love.timer.getFPS( )), 10, 10)
 end
