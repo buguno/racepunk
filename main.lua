@@ -69,5 +69,8 @@ function love.draw()
 
     love.graphics.print(string.format("Velocidade: %.2f mph", speed), 650, 250)
     love.graphics.print(string.format("Tempo: %.2f s", time), 650, 270)
+    love.graphics.print(
+        string.format("Percorrido: %.2f km", traveled/1000), 650, 290
+    )
     love.graphics.print("Current FPS: "..tostring(love.timer.getFPS( )), 10, 10)
 end
