@@ -49,9 +49,12 @@ end
 function love.draw()
     love.graphics.draw(background_image)
 
+    -- Desenha faixas (sensação de velocidade)
     local position = (traveled % 4) * 30 - 60
-    for fc=0,5 do
-        love.graphics.draw(strip_image, 345, position + fc * 120)
+    for strip_vertical_position=0, 5 do
+        love.graphics.draw(
+            strip_image, 345, position + strip_vertical_position * 120
+        )
     end
 
     love.graphics.draw(car, x, y)
