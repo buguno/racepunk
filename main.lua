@@ -16,12 +16,14 @@ end
 
 
 function love.update(dt)
-    if love.keyboard.isDown("left") and x > 250 then
-        x = x - 200 * dt
-    end
+    if speed > 0 then
+        if love.keyboard.isDown("left") and x > 250 then
+            x = x - 200 * dt
+        end
 
-    if love.keyboard.isDown("right") and x < 490 then
-        x = x + 200 * dt
+        if love.keyboard.isDown("right") and x < 490 then
+            x = x + 200 * dt
+        end
     end
 
     traveled = traveled + speed * dt
