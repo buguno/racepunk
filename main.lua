@@ -5,6 +5,7 @@ function love.load()
     speed = 60
     acceleration = 0
     traveled = 0
+    time = 0
     car = love.graphics.newImage("misc/images/car.png")
 
     -- Dados do ambiente
@@ -43,6 +44,13 @@ function love.update(dt)
     if speed < 0 then
         speed = 0
     end
+
+    -- Incrementa o tempo
+    if not end_game then
+        time = time + dt
+    else
+        acceleration = -10
+    end
 end
 
 
@@ -60,5 +68,6 @@ function love.draw()
     love.graphics.draw(car, x, y)
 
     love.graphics.print(string.format("Velocidade: %.2f mph", speed), 650, 250)
+    love.graphics.print(string.format("Tempo: %.2f s", time), 650, 270)
     love.graphics.print("Current FPS: "..tostring(love.timer.getFPS( )), 10, 10)
 end
