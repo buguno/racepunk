@@ -12,6 +12,8 @@ function love.load()
     end_game = false
     background_image = love.graphics.newImage("misc/images/background_test.png")
     strip_image = love.graphics.newImage("misc/images/strips.png")
+    music = love.audio.newSource("misc/sounds/music/phase_01.mp3", "stream")
+    love.audio.play(music)
 end
 
 
@@ -69,10 +71,10 @@ function love.draw()
 
     love.graphics.draw(car, x, y)
 
-    love.graphics.print(string.format("Velocidade: %.2f mph", speed), 650, 250)
-    love.graphics.print(string.format("Tempo: %.2f s", time), 650, 270)
+    love.graphics.print(string.format("Velocidade: %.2f mph", speed), 650, 540)
+    love.graphics.print(string.format("Tempo: %.2f s", time), 650, 560)
     love.graphics.print(
-        string.format("Percorrido: %.2f km", traveled/1000), 650, 290
+        string.format("Percorrido: %.2f km", traveled/1000), 650, 580
     )
-    love.graphics.print("Current FPS: "..tostring(love.timer.getFPS( )), 10, 10)
+    love.graphics.print("FPS: "..tostring(love.timer.getFPS( )), 10, 10)
 end
