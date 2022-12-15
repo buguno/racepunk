@@ -14,6 +14,14 @@ function love.load()
     strip_image = love.graphics.newImage("misc/images/strips.png")
     music = love.audio.newSource("misc/sounds/music/phase_01.mp3", "stream")
     love.audio.play(music)
+
+    -- Obstaculo (Poça d'água)
+    puddle = false
+    puddle_position = 0
+    puddle_x = 0
+    puddle_y = 0
+    puddle_image = love.graphics.newImage("misc/images/puddle.png")
+    puddle_sound = love.audio.newSource("misc/effect/splash.mp3", "static")
 end
 
 
