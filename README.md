@@ -36,9 +36,11 @@ Para iniciar o Racepunk, você terá que estar um nível acima do diretório do 
     │   ├── images
     │   │   ├── background_test.png
     │   │   ├── car.png
+    │   │   ├── puddle.png
     │   │   └── strips.png
     │   └── sounds
     │       ├── effect
+    │       │   └── splash.mp3
     │       └── music
     │           ├── phase_01.mp3
     │           └── README.md
