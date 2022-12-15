@@ -14,7 +14,35 @@ Para instalar o love no Debian basta rodar o comando.
 sudo apt install love
 ```
 
-### Controles
+## Como iniciar o jogo
+
+Para iniciar o Racepunk, você terá que estar um nível acima do diretório do repositório.
+
+```bash
+. (Abra o seu bash aqui)
+└── racepunk
+    ├── LICENSE
+    ├── main.lua
+    ├── misc
+    │   ├── images
+    │   │   ├── background_test.png
+    │   │   ├── car.png
+    │   │   └── strips.png
+    │   └── sounds
+    │       ├── effect
+    │       └── music
+    │           ├── phase_01.mp3
+    │           └── README.md
+    └── README.md
+```
+
+Feito isso, basta rodar o comando abaixo.
+
+```bash
+love racepunk
+```
+
+## Controles
 
 | Tecla | Ação |
 | ----- | ---- |
