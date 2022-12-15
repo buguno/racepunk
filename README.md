@@ -1,5 +1,14 @@
 # Racepunk
 
+[![Lua](https://img.shields.io/badge/lua-2C2D72?style=for-the-badge&logo=lua&logoColor=ffffff)](https://www.lua.org/)
+[![LÖVE](https://img.shields.io/badge/LÖVE-EA316E?style=for-the-badge&logo=lua&logoColor=ffffff)](https://love2d.org/)
+[![GitHub issues](https://img.shields.io/github/issues/buguno/racepunk?style=for-the-badge)](https://github.com/buguno/racepunk/issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/buguno/racepunk?style=for-the-badge)](https://github.com/buguno/racepunk/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/buguno/racepunk?style=for-the-badge)](https://github.com/buguno/racepunk/pulls)
+[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/buguno/racepunk?style=for-the-badge)](https://github.com/buguno/racepunk/pulls?q=is%3Apr+is%3Aclosed)
+[![GitHub contributors](https://img.shields.io/github/contributors/buguno/racepunk?style=for-the-badge)](https://github.com/buguno/racepunk/graphs/contributors)
+[![Activity](https://img.shields.io/github/last-commit/buguno/racepunk?style=for-the-badge&label=most%20recent%20activity)](https://github.com/buguno/racepunk/pulse)
+
 Racepunk é um jogo de corrida escrito em lua e que usa o framework Love, a criação deste jogo tem como foco principal o trabalho final da disciplina de tópicos avançados em programação I (DCT4401) do curso de Bacharelado em Sistemas de Informação da UFRN, ministrada pelo docente Dr. João Paulo Medeiros.
 
 ## Como instalar o Love
