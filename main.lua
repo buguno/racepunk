@@ -92,7 +92,7 @@ function love.update(dt)
         acceleration = -10
     end
 
-    if time > 10 and not end_game then
+    if time > 234 and not end_game then
         if traveled > 10000 then
             end_game = "PARABÉNS"
         else
