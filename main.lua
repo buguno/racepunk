@@ -24,6 +24,7 @@ function love.load()
     puddle_sound = love.audio.newSource(
         "misc/sounds/effect/splash.mp3", "static"
     )
+    rng = love.math.newRandomGenerator(love.timer.getTime())
 end
 
 
@@ -63,15 +64,14 @@ function love.update(dt)
             if x + 55 > puddle_x and x < puddle_x + 60 and puddle_y + 65 > 450 and puddle_y < 455 then
                 -- Verifica se há colisão e se houver, reduz a aceleração
                 acceleration = acceleration - 4 * speed
-                if speed > 5 then
-                    love.audio.play(puddle_sound)
-                end
+                puddle_sound:setVolume(speed / 50)
+                love.audio.play(puddle_sound)
             end
         end
-    elseif math.random() < 0.1 then
+    elseif rng:random() < 0.1 then
         -- Cria poça em 10% dos casos quando ela não existe
         puddle_position = traveled + 30
-        puddle_x = 100 * math.random(3) + 170
+        puddle_x = 100 * rng:random(3) + 170
         -- Coloca a poça em uma das três faixas aleatoriamente
         puddle = true
     end
@@ -92,7 +92,7 @@ function love.update(dt)
         acceleration = -10
     end
 
-    if time > 234 and not end_game then
+    if time > 10 and not end_game then
         if traveled > 10000 then
             end_game = "PARABÉNS"
         else
@@ -130,6 +130,7 @@ function love.draw()
 
     -- Desenha o fim do jogo
     if end_game then
+        speed = 0
         love.graphics.print(end_game, 650, 520)
         love.audio.stop(music)
     end
